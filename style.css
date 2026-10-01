@@ -1,0 +1,80 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #111827;
+  --fg: #f3f4f6;
+  --muted: #9ca3af;
+  --border: #374151;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+main {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button,
+input {
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+form input {
+  flex: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+li span {
+  flex: 1;
+}
+
+li.done span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
