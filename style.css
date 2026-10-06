@@ -78,3 +78,8 @@ li.done span {
   color: var(--muted);
   text-decoration: line-through;
 }
+
+#counter {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

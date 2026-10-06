@@ -3,6 +3,7 @@ const toggle = document.getElementById('theme-toggle');
 const list = document.getElementById('list');
 const form = document.getElementById('add-form');
 const input = document.getElementById('new-todo');
+const counter = document.getElementById('counter');
 
 function load(key, fallback) {
   try {
@@ -39,6 +40,8 @@ let todos = load('todos', []);
 
 function render() {
   list.textContent = '';
+  const remaining = todos.filter((t) => !t.done).length;
+  counter.textContent = `${remaining} ${remaining === 1 ? 'task' : 'tasks'} left`;
   for (const todo of todos) {
     const li = document.createElement('li');
     li.classList.toggle('done', todo.done);
